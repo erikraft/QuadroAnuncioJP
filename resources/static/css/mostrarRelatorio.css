@@ -1,124 +1,51 @@
-
-.containers h2{
-    text-align: center;
-    margin-top: 5%;
+.containers {
+    width: min(var(--container), 100%);
+    margin: 1rem auto;
+    padding: 1rem;
 }
 
-.table-responsive th{
-    text-align: center;
-    width: 15%;
-    flex-wrap: wrap;
+.containers h2 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
 }
 
-.table-responsive td{
-    width: 15%;
-    flex-wrap: wrap;
-}
-
-
-.linhaPesquisa {
+.linhaMes {
     display: flex;
-    justify-content: center;
-    margin-top: 5%;
+    gap: 0.7rem;
+    align-items: center;
+    width: min(680px, 100%);
+    margin: 1rem auto;
+}
+
+.linhaMes select {
+    flex: 1;
+}
+
+.linhaMes button {
+    flex: 0 0 auto;
 }
 
 .form-inline {
     display: flex;
-    align-items: center;
+    gap: 0.6rem;
 }
 
-.form-control{
-    width: 70%;
-    margin-right: 3%;
+.btExcluirRel {
+    min-width: 118px;
 }
 
-
-
-
-
-.linhaMes{
-    margin-top: 5%;
-    width: 100%;
+.table-responsive td {
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
-.linhaMes select{
-    font-size: 100%;
-    font-weight: 700;
-    width: 50%;
-    padding: 1% 5%;
-    margin-left: 10%;
-    border-radius: 25px;
-}
-
-.linhaMes button{
-    border-radius: 25px;
-    font-size: 100%;
-    font-weight: 700;
-    margin-left: 5%;
-    flex-grow: 1;
-    padding: 1% 5%;
-}
-
-.btExcluirRel{
-    width: 94%;
-    margin-left: 3%;
-    background-color: red;
-    color: white;
-    border-radius: 25px;
-    font-weight: 600;
-}
-
-@media only screen and (min-width: 649px) {
-
-    .containers h2{
-        text-align: center;
-        margin-top: 5%;
+@media (max-width: 780px) {
+    .linhaMes {
+        flex-direction: column;
+        align-items: stretch;
     }
 
-    .containers{
-        width: 90%;
-        margin-left: 5%;
+    .linhaMes button {
+        width: 100%;
     }
-
-    .table-responsive th{
-        text-align: center;
-        width: 15%;
-        flex-wrap: wrap;
-        font-size: 140%;
-
-    }
-
-    .table-responsive td{
-        width: 15%;
-        flex-wrap: wrap;
-        font-size: 125%;
-        font-weight: 600;
-    }
-
-
-    .linhaMes{
-        display: flex;
-        margin-top: 5%;
-        width: 50%;
-        margin-left: 25%
-    }
-
-    .linhaMes select{
-        font-size: 120%;
-        font-weight: 700;
-        width: 60%;
-        padding: 1% 5%;
-        margin-left: 10%;
-        border-radius: 25px;
-    }
-
-    .linhaMes button{
-        font-size: 100%;
-        font-weight: 700;
-        margin-left: 5%;
-        padding: 1% 5%;
-        border-radius: 25px;
-    }
-
-
 }

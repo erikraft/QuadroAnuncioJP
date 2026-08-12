@@ -1,89 +1,41 @@
-
-
-/*CSS PARA CELULAR*/
-@media only screen and (max-width: 750px) {
-    
-    .carrinhoIMG{
-        margin-top: 10%;
-        width: 100%;
-    }
-    
-    .descricaoCarrinho{
-        width: 90%;
-        text-align: center;
-        font-family: Arial;
-        font-size: 110%;
-    }
-    
-    .caixaCarrinho{
-        width: 96%;
-        margin-left: 2%;
-        border-radius: 20px;
-        border: 1px solid black;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        background-color: blanchedalmond;
-    }
-    
-    .botaoExcluirCar{
-        width: 40%;
-        text-align: center;
-        font-size: 110%;
-        color: black;
-        border: 1px solid #750000;
-        border-radius: 15px;
-        background: radial-gradient(circle, #FFB0B0 50%, #FF0000);
-        margin: auto;
-        margin-bottom: 4%;
-    }
-    
+.carrinhoTodo {
+    margin-top: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+.carrinhoTodo > div {
+    display: grid;
+    gap: 1rem;
+}
 
-@media only screen and (min-width: 750px) {
-    
-    .carrinhoTodo{
-        display: flex;
-        width: 100%;
+.carrinhoIMG {
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.descricaoCarrinho {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    line-height: 1.6;
+    text-align: left;
+    white-space: pre-wrap;
+}
+
+.labelCarrinho {
+    margin-bottom: 0.3rem;
+}
+
+.caixaCarrinho textarea {
+    min-height: 110px;
+}
+
+.botaoExcluirCar {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 750px) {
+    .carrinhoTodo {
+        grid-template-columns: 1fr;
     }
-    
-    .carrinhoIMG{
-        margin-top: 10%;
-        margin-left: 20%;
-        width: 60%;
-    }
-    
-    .descricaoCarrinho{
-        width: 60%;
-        margin-left: 20%;
-        text-align: center;
-        font-family: Arial;
-        font-size: 125%;
-    }
-    
-    .caixaCarrinho{
-        width: 90%;
-        margin-left: 5%;
-        border-radius: 20px;
-        border: 1px solid black;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        background-color: blanchedalmond;
-    }
-    
-    
-    .botaoExcluirCar{
-        width: 40%;
-        text-align: center;
-        font-size: 110%;
-        color: black;
-        border: 1px solid #750000;
-        border-radius: 15px;
-        background: radial-gradient(circle, #FFB0B0 50%, #FF0000);
-        margin: auto;
-        margin-bottom: 4%;
-        cursor: pointer;
-    }
-    
-    
 }
