@@ -10,10 +10,13 @@
         <link rel="stylesheet" href="css/index.css" />        
     </head>
 
-    <body style="margin-bottom: 15%; background-color: whitesmoke;">
-        <header>
+    <body>
+        <header class="site-header">
 
             <div class="opcoes0">
+                <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                    ☰
+                </button>
                 <div class="opcoes">
                     <a th:href="@{/carrinho}" class="opcao-link">
                         <p class="opcoesP">Carrinho</p>
@@ -44,10 +47,10 @@
             <div th:each="aviso : ${aviso}">
                 <div th:if="${aviso.tema != null}" class="accordion" id="accordionExample">
                     <div class="card">
-                        <div style="background-color: #FFB0B0; text-align: center; height: 50px;" class="card-header d-flex" id="headingOne">
+                        <div class="card-header d-flex aviso-header" id="headingOne">
                             <h5 class="mb-0 w-100">
                                 <button class="btn btn-link w-100" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <p style="text-align: center; font-size: 125%; color: black; font-weight: 800; margin-top: -10px;" th:text="${aviso.tema}"></p>
+                                    <p class="aviso-title" th:text="${aviso.tema}"></p>
                                 </button>
                             </h5>
                         </div>
@@ -84,7 +87,7 @@
 
         </main>
 
-        <footer>
+        <footer class="app-footer">
 
         </footer>
 
@@ -97,6 +100,20 @@
         crossorigin="anonymous"></script>
 
         <script>
+            const menuToggle = document.getElementById("menuToggle");
+            const navOptions = document.querySelector(".opcoes");
+            const siteHeader = document.querySelector(".site-header");
+            menuToggle.addEventListener("click", function () {
+                navOptions.classList.toggle("is-open");
+            });
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 20) {
+                    siteHeader.classList.add("scrolled");
+                } else {
+                    siteHeader.classList.remove("scrolled");
+                }
+            });
+
             // Adiciona um evento de clique ao link
             document.getElementById("linkEntrar").addEventListener("click", function () {
                 var permissao = localStorage.getItem("permissao");
